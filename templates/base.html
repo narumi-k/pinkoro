@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../static/css/style_pc.css">
+  <link rel="stylesheet" href="../static/css/style_sp.css">
+
+  <title>八代でおさんぽでピンピンコロリ</title>
 </head>
+
 <body>
-  
+  <div class="header">
+    <div class="header-logo">八代でおさんぽでピンピンコロリ </div>
+    <div class="header-list">
+      <ul>
+        <li><a href="">ログイン </a> </li>
+        <li><a href="">コース一覧</a></li>
+        <li> <a href="">問い合わせ</a> </li>
+      </ul>
+    </div>
+  </div>
+
+  {% block content %}
+
+  {% endblock %}
+
+
+  <div class="footer">
+    <div class="footer-logo"> 運営 八代おさんぽでピンピンコロリ推進委員会
+
+    </div>
+    <div class="footer-list">
+      <ul>
+        <li>八代市ホームページ</li>
+        <li>熊本おさんぽコース</li>
+        <li>sunabaco</li>
+      </ul>
+    </div>
+
+
+  </div>
+
 </body>
+
 </html>
