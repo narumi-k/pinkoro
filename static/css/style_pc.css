@@ -87,3 +87,42 @@ button.btn:hover{
   color: #ff4a4a;
   font-weight: bold;
 }
+
+/* courseのCSS */
+.title{
+  font-size: 80px;
+  text-align: center;
+  color: #f3be10;
+}
+.junbi{
+  text-align: center;
+  height: 70pxpx;
+}
+.junbi p{
+  font-size: 70px;
+  color: black;
+}
+.course{
+  padding: 2.5% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.course p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f3be10;
+
+}
+.return{
+  text-align: center;
+}
+.course_btn{
+  font-size:30px ;
+  font-weight: bold;
+  background-color: orange;
+  padding: 60px 120px;
+  margin: 5%;
+  box-shadow   : 6px 6px 3px #666666; 
+}

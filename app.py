@@ -16,6 +16,10 @@ def top():
 def bbs():
     return render_template("bbs.html")
 
+@app.route("/course")
+def course():
+    return render_template("course.html")
+
 
 @app.route("/taiyou")
 def taiyou():
