@@ -55,7 +55,7 @@ li {
 .login  {
   text-align: right;
 }
-
+/* footer */
 .footer{
   background-color: orange;
   height: 270px;
@@ -64,4 +64,26 @@ li {
 }
 .footer-list li{
 text-align: right;
+}
+/* #新しいTOP */
+
+.menue{
+  text-align: center;
+}
+.btn{
+  font-size:30px ;
+  font-weight: bold;
+  background-color: orange;
+  padding: 60px 120px;
+  margin: 5%;
+  box-shadow   : 6px 6px 3px #666666; 
+}
+button.btn:hover{
+  background-color: rgb(221, 199, 34);
+  color: #fff;
+}
+.setsumei{
+  font-size: 25px;
+  color: #ff4a4a;
+  font-weight: bold;
 }
