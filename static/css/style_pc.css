@@ -66,7 +66,13 @@ li {
 text-align: right;
 }
 /* #新しいTOP */
-
+.intro{
+  text-align: center;
+  font-size: 50px;
+}
+intro p{
+  font-size: 30px;
+}
 .menue{
   text-align: center;
 }
@@ -95,13 +101,7 @@ button.btn:hover{
   text-align: center;
   color: #f3be10;
 }
-.intro{
-  text-align: center;
-  font-size: 50px;
-}
-.intro p{
-  font-size: 25px;
-}
+
 .junbi{
   text-align: center;
   height: 70pxpx;
@@ -137,3 +137,32 @@ button.btn:hover{
   margin: 5%;
   box-shadow   : 6px 6px 3px #666666; 
 } */
+
+
+/* introのページ */
+.intro_setsumei{
+  text-align: center;
+  font-size: 50px;
+}
+intro_pincoro p{
+  font-size: 30px;
+}
+
+/* 掲示板のページ */
+.bbs{
+  text-align:center;
+
+}
+.honbun {
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+.label{
+  vertical-align: top;
+  margin-right: 5px;
+}
+.toukou{
+  border-top: 1px solid;
+  margin: 40px auto;
+  max-width: 975px;
+}
