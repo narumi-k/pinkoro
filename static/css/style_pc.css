@@ -153,8 +153,8 @@ intro_pincoro p{
 /* 掲示板のページ */
 .bbs{
   text-align:center;
-
 }
+
 .honbun {
   margin-top: 30px;
   margin-bottom: 12px;
@@ -163,7 +163,7 @@ intro_pincoro p{
   vertical-align: top;
   margin-right: 5px;
 }
-.toukou{
+.toukou_hyouji{
   border-top: 1px solid;
   margin: 40px auto;
   max-width: 975px;
