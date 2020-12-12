@@ -2,21 +2,31 @@
 {% block content %}
 
 <div class="bbs">
+
   <h1>掲示板</h1>
-  <section>
+
+  <div class="shinki_toukou">
     <h2>新規投稿</h2>
-    <form action="" method="post">
-      <div class="name"><span class="label">お名前:</span><input type="text" name="name" value=""></div>
-      <div class="honbun"><span class="label">本文:</span><textarea name="comment" cols="30" rows="3" maxlength="80"
-          wrap="hard" placeholder="80字以内で入力してください。"></textarea></div>
-          <input type="file" name="upload" id="">
-          <input type="submit" value="投稿">
+    <form action="/add" method="post">
+      <p>ニックネーム</p><input type="text" name="name" value="">
+      <p>本文</p><textarea name="comment" cols="30" rows="3" wrap="hard"></textarea>
+      <br>
+      <input type="file" name="upload" class="file_upload">
+      <input type="submit" value="投稿" class="toukou">
     </form>
-  </section>
-  <section class="toukou">
+  </div>
+
+  {% for item in comment_list %}
+
+  <div class="toukou_hyouji">
     <h2>投稿一覧</h2>
-    <p>投稿はまだありません</p>
-  </section>
+    <p>{{item["name"]}}</p>
+    <p>投稿時間：{{item["time"]}}</p>
+    <p>{{item["comment"]}}</p>
+  </div>
+  
+  {% endfor %}
+
 </div>
 
 {% endblock %}
