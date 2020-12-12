@@ -71,10 +71,15 @@ text-align: right;
   text-align: center;
   font-size: 50px;
 }
-intro p{
-  font-size: 30px;
+.intro p{
+  font-size: 40px;
 }
-
+.intro li{
+  text-align: center;
+  font-size: 40px;
+  padding-left:1em;
+  text-indent:-1em;
+}
 .menu{
   text-align: center;
 }
@@ -144,10 +149,51 @@ button.btn:hover{
 /* introのページ */
 .intro_setsumei{
   text-align: center;
-  font-size: 50px;
+  font-size: 35px;
 }
-intro_pincoro p{
-  font-size: 30px;
+.intro_setsumei p{
+  font-size: 40px;
+  
+}
+.intro_pincoro h1{
+  padding: 26px 20px 33px 30px;
+  font-size: 212.5%;
+  line-height: 1.3;
+  margin: 0 0 55px;
+  clear: both;
+  border-bottom: 1px solid #295676;
+  background: url(/shared/templates/free/images/border_h1.png) no-repeat left top, url(/static/images/jizou2.png) no-repeat right top;
+  background-size: 9px 100%, auto;
+}
+.intro_pincoro p{
+  text-align: left;
+
+}
+.course_riyou p{
+  text-align: left;
+}
+.bbs_setsumei p{
+  text-align: left;
+}
+.course_riyou h1{
+  padding: 26px 20px 33px 30px;
+  font-size: 212.5%;
+  line-height: 1.3;
+  margin: 0 0 55px;
+  clear: both;
+  border-bottom: 1px solid #295676;
+  background: url(/shared/templates/free/images/border_h1.png) no-repeat left top, url(/static/images/歩く人のシルエットアイコン素材\ 1\ \(2\).png) no-repeat right top;
+  background-size: 9px 100%, auto;
+}
+.bbs_setsumei h1{
+  padding: 26px 20px 33px 30px;
+  font-size: 212.5%; 
+  line-height: 1.3;
+  margin: 0 0 55px;
+  clear: both;
+  border-bottom: 1px solid #295676;
+  background: url(/shared/templates/free/images/border_h1.png) no-repeat left top, url(/static/images/ペライチの資料の無料アイコン素材\ 3\ \(1\).png) no-repeat right top;
+  background-size: 9px 100%, auto;
 }
 
 /* 掲示板のページ */
