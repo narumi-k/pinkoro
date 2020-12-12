@@ -7,6 +7,9 @@ app = Flask(__name__)
 app.secret_key = "sunabaco"
 
 
+
+
+
 @app.route("/")
 def top():
     return render_template("top.html")
@@ -57,7 +60,12 @@ def regist_get():
 @app.route("/regist", methods=["POST"])
 def regist_post():
     if "user_id" in session:
+
         return redirect("/top")
+
+
+        return redirect("/")
+    
 
     else:
         name = request.form.get("name")
@@ -69,7 +77,56 @@ def regist_post():
         conn.commit()
         c.close()
 
-        return redirect("/top")
+        return redirect("/")
+
+@app.route("/",methods=["POST"])
+def login_post():
+    name = request.form.get("name")
+    password = request.form.get("password")
+
+
+    conn = sqlite3.connect("pinkoro.db")
+    c = conn.cursor()
+    c.execute("select id from users where name = ? and password = ?",(name,password))
+    user_id = c.fetchone()
+    c.close()
+
+    if user_id is None:
+        return render_template("regist.html")
+    else:
+        session["user_id"] = user_id[0]
+        return redirect("/")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@app.route("/logout")
+def logout():
+    session.pop("user_id",None)
+    return redirect("/")
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("page_not_found.html"),404
+
+
 
 
 if __name__ == "__main__":
