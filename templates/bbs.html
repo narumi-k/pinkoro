@@ -1,23 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="matsutaka_header">
-  <div class="course_count">
-    <p>○○さんこんにちは</p>
-    <br>
-    <p >松高校区コース○回目</p>
-  </div>
-  <h1 class="kouku_name">松高校区コース</h1>
-  <button class="logout" type="button">ログアウト</button>
-</div>
-
-<div class="map">
-  <img src="/static/images/松高地図.png" alt="">
-</div>
-
-<div>
-  
-
+<div class="bbs">
+  <h1>掲示板</h1>
+  <section>
+    <h2>新規投稿</h2>
+    <form action="" method="post">
+      <div class="name"><span class="label">お名前:</span><input type="text" name="name" value=""></div>
+      <div class="honbun"><span class="label">本文:</span><textarea name="comment" cols="30" rows="3" maxlength="80"
+          wrap="hard" placeholder="80字以内で入力してください。"></textarea></div>
+          <input type="file" name="upload" id="">
+          <input type="submit" value="投稿">
+    </form>
+  </section>
+  <section class="toukou">
+    <h2>投稿一覧</h2>
+    <p>投稿はまだありません</p>
+  </section>
 </div>
 
 {% endblock %}
