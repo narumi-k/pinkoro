@@ -77,6 +77,7 @@ text-align: right;
   padding: 60px 120px;
   margin: 5%;
   box-shadow   : 6px 6px 3px #666666; 
+  /* background: url("/static/images/junbikakou.png") no-repeat; */
 }
 button.btn:hover{
   background-color: rgb(221, 199, 34);
@@ -94,12 +95,19 @@ button.btn:hover{
   text-align: center;
   color: #f3be10;
 }
+.intro{
+  text-align: center;
+  font-size: 50px;
+}
+.intro p{
+  font-size: 25px;
+}
 .junbi{
   text-align: center;
   height: 70pxpx;
 }
 .junbi p{
-  font-size: 70px;
+  font-size: 50px;
   color: black;
 }
 .course{
@@ -118,11 +126,14 @@ button.btn:hover{
 .return{
   text-align: center;
 }
-.course_btn{
+.return_btn{
+  height: 90px;
+}
+/* .course_btn{
   font-size:30px ;
   font-weight: bold;
   background-color: orange;
   padding: 60px 120px;
   margin: 5%;
   box-shadow   : 6px 6px 3px #666666; 
-}
+} */

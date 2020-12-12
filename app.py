@@ -20,6 +20,11 @@ def bbs():
 def course():
     return render_template("course.html")
 
+@app.route("/intro")
+def intro():
+    return render_template("intro.html")
+
+
 
 @app.route("/taiyou")
 def taiyou():
