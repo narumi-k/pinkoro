@@ -214,3 +214,16 @@ button.btn:hover{
   margin: 40px auto;
   max-width: 975px;
 }
+
+.bbs_area {
+  border: solid 2px black;
+  margin-bottom: 10px
+}
+.bbs_comment {
+  font-size: 20px;
+}
+
+.bbs_img {
+  width: 300px;
+  height: 300px;
+}
