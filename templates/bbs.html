@@ -7,25 +7,32 @@
 
   <div class="shinki_toukou">
     <h2>新規投稿</h2>
-    <form action="/add" method="post">
-      <p>ニックネーム</p><input type="text" name="name" value="">
-      <p>本文</p><textarea name="comment" cols="30" rows="3" wrap="hard"></textarea>
+    <form action="/add" method="post" enctype="multipart/form-data">
+      <p>ニックネーム</p><input type="text" name="name" value="" required>
+      <p>本文</p><textarea name="comment" cols="30" rows="3"></textarea>
       <br>
-      <input type="file" name="upload" class="file_upload">
+      <input type="file" name="upload" class="file_upload" accept=".png, .jpg, .jpeg">
+      <input type="file" name="unit" class="file_upload" accept=".png, .jpg, .jpeg" style="display: none;">
       <input type="submit" value="投稿" class="toukou">
     </form>
   </div>
 
-  {% for item in comment_list %}
 
   <div class="toukou_hyouji">
     <h2>投稿一覧</h2>
-    <p>{{item["name"]}}</p>
-    <p>投稿時間：{{item["time"]}}</p>
-    <p>{{item["comment"]}}</p>
+
+    {% for item in comment_list %}
+
+    <div class="bbs_area">
+      <p class="bbs_name">ニックネーム：{{item["name"]}}</p>
+      <p class="bbs_comment">{{item["comment"]}}</p>
+      <img class="bbs_img" src="../static/upload/{{item['image']}}" alt="">
+      <p>{{item["time"]}}</p>
+    </div>
+    
+    {% endfor %}
+
   </div>
-  
-  {% endfor %}
 
 </div>
 
