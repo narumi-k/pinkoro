@@ -13,7 +13,7 @@ li {
 }
 .header-logo{
   float: left;
-  font-size: 36px;
+  font-size: 25px;
   padding: 20px 40px;
 }
 .header-list li{
@@ -99,6 +99,15 @@ button.btn:hover{
   font-size: 30px;
   color: black;
 }
+.junbi li{
+  font-size: 20px;
+}
+.course_p{
+  text-align: center;
+  font-size: 30px;
+  color: orange;
+  font-weight: bold;
+}
 .course{
   padding: 2.5% 0;
   display: flex;
@@ -112,16 +121,43 @@ button.btn:hover{
   color: #000000;
 
 }
-.btn_course {
+.btn_course1 {
   font-size:30px ;
   font-weight: bold;
   background-color: orange;
-  /* padding: 60px 120px; */
-  /* margin: 5%; */
   box-shadow   : 6px 6px 3px #666666; 
   width: 300px;
   height: 200px;
+  background-image:url(/static/images/しょうひんけん\(1\).png);
 
+}
+.btn_course2{
+  font-size:30px ;
+  font-weight: bold;
+  background-color: orange;
+  box-shadow   : 6px 6px 3px #666666; 
+  width: 300px;
+  height: 200px;
+  background-image:url(/static/images/水島\ \(1\).png);
+}
+
+.btn_course3{
+  font-size:30px ;
+  font-weight: bold;
+  background-color: orange;
+  box-shadow   : 6px 6px 3px #666666; 
+  width: 300px;
+  height: 200px;
+  background-image:url(/static/images/金波楼\ \(1\).jpg);
+}
+.btn_course4{
+  font-size:30px ;
+  font-weight: bold;
+  background-color: orange;
+  box-shadow   : 6px 6px 3px #666666; 
+  width: 300px;
+  height: 200px;
+  background-image:url(/static/images/東陽村\ \(1\).jpg);
 }
 .return{
   text-align: center;
@@ -222,4 +258,13 @@ button.btn:hover{
 .bbs_img {
   width: 300px;
   height: 300px;
+}
+.map{
+  text-align: center; 
+}
+.map h1{
+  font-size: 45px;
+}
+map p{
+  font-size: 45px;
 }
