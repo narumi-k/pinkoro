@@ -84,6 +84,22 @@ def course():
 def intro():
     return render_template("intro.html")
 
+@app.route("/taiyou")
+def taiyou():
+    return render_template("taiyou.html")
+
+@app.route("/mugishima")
+def mugishima():
+    return render_template("mugishima.html")
+
+@app.route("/sakamoto")
+def sakamoto():
+    return render_template("sakamoto.html")
+
+@app.route("/miyaji")
+def miyaji():
+    return render_template("miyaji.html")
+
 
 
 
