@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="bbs">
+
+  <h1>掲示板</h1>
+
+  <div class="shinki_toukou">
+    <h2>新規投稿</h2>
+    <form action="/add" method="post" enctype="multipart/form-data">
+      <p>ニックネーム</p><input type="text" name="name" value="" required>
+      <p>本文</p><textarea name="comment" cols="30" rows="3"></textarea>
+      <br>
+      <input type="file" name="upload" class="file_upload" accept=".png, .jpg, .jpeg">
+      <input type="file" name="unit" class="file_upload" accept=".png, .jpg, .jpeg" style="display: none;">
+      <input type="submit" value="投稿" class="toukou">
+    </form>
+  </div>
+
+
+  <div class="toukou_hyouji">
+    <h2>投稿一覧</h2>
+
+    {% for item in comment_list %}
+
+    <div class="bbs_area">
+      <p class="bbs_name">ニックネーム：{{item["name"]}}</p>
+      <p class="bbs_comment">{{item["comment"]}}</p>
+      <img class="bbs_img" src="../static/upload/{{item['image']}}" alt="">
+      <p>{{item["time"]}}</p>
+
+      <a href="/reply/{{item['id']}}">返信</a>
+      <a href="/del/{{item['id']}}">削除</a>
+
+    </div>
+    
+    {% endfor %}
+
+
+
+  </div>
+
+
+</div>
+
+{% endblock %}

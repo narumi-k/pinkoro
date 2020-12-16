@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="henshin">
+<h2>返信</h2>
+
+{% for item in comment_list %}
+    <div class="bbs_area">
+        <p class="bbs_name">ニックネーム：{{item["name"]}}</p>
+        <p class="bbs_comment">{{item["comment"]}}</p>
+        <img class="bbs_img" src="../static/upload/{{item['image']}}" alt="">
+        <p>{{item["time"]}}</p>
+    </div>
+{% endfor %}
+
+    <div class="reply">
+        <form action="/reply/{{comment_id}}" method="post">
+            <input type="hidden" name="comment_id" value="{{comment_id}}">
+            <label>ニックネーム：</label><input type="text" name="reply_name" value="" required>
+            <label>本文：</label><input name="reply_comment" required>
+            <input type="submit" name="reply_submit" value="コメントする">
+        </form>
+    </div>
+
+{% for item in reply_list %}
+
+    <div class="rep_hyouji_area">
+        <p class="rep_hyouji_name">ニックネーム：{{item["name"]}}</p>
+        <p class="rep_hyouji_comment">{{item["comment"]}}</p>
+        <p>{{item["time"]}}</p>
+    </div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="main">
+  <h1 class="title">八代のおさんぽコース</h1>
+  <div class="junbi">
+    <img src="/static/images/walking.png" alt="">
+    <p> まずは準備運動始めましょう <br>八代体操でウォーミングアップ！ </p>
+    <img src="/static/images/junbikakou.png" alt="">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Oiz2jE8V13o" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
+<p class="course_p">八代おさんぽコース一覧</p>
+<div class="course">
+  <div class="taiyou">
+    <button class="btn_course1" onclick="location.href='http://127.0.0.1:5000/taiyou'">
+      <img src="" alt="">
+      <p>代陽・八代・大田郷・植柳</p>
+    </button>
+
+  </div>
+  <div class="mugishima">
+    <button class="btn_course2" onclick="location.href='http://127.0.0.1:5000/mugishima'">
+      <img src="" alt="">
+
+    </button>
+  </div>
+  <div class="miyaji">
+    <button class="btn_course3" onclick="location.href='http://127.0.0.1:5000/miyaji'">
+      <img src="" alt="">
+
+    </button>
+  </div>
+  <div class="sakamoto">
+    <button class="btn_course4" onclick="location.href='http://127.0.0.1:5000/sakamoto'">
+      <img src="" alt="">
+    </button>
+
+  </div>
+</div>
+<div class="return">
+  <button class="course_btn" onclick="location.href='http://127.0.0.1:5000//'">
+    <p>TOPへ</p>
+  </button>
+</div>
+
+
+{% endblock %}
