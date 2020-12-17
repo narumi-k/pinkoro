@@ -35,7 +35,7 @@ $(".omikuji_btn").on("click",function(){
 });
 
 $(".hum_menu").on("click",function(){
-    $("header").toggleClass("open");
+    $(".header-list").toggleClass("open");
 });
 
 });
