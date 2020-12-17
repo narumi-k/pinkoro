@@ -27,20 +27,10 @@ def bbs():
     comment_list = []
     for row in c.fetchall():
         comment_list.append({"id": row[0], "name": row[1], "comment": row[2], "image": row[3], "time":row[4]})
-    
-    # if comment_list["image"] is None:
-
-
-    # comment_id = comment_list
-
-    # c.execute("select count(comment_id) from reply")
-    # reply_count = c.fetchall()
-    # print("-------------------------")
-    # print(reply_count)
 
     c.close()
 
-    return render_template('bbs.html', comment_list = comment_list, reply_count = reply_count)
+    return render_template('bbs.html', comment_list = comment_list)
 
 
 
