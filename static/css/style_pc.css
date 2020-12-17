@@ -337,3 +337,11 @@ map p{
   width: 300px;
   height: 300px;
 }
+
+.omikuji_btn {
+  padding: 20px 30px;
+}
+
+.omikuji_comment {
+  font-size: 20px;
+}
