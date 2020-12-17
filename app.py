@@ -27,10 +27,19 @@ def bbs():
     comment_list = []
     for row in c.fetchall():
         comment_list.append({"id": row[0], "name": row[1], "comment": row[2], "image": row[3], "time":row[4]})
-
+    
+    c.execute("select max(comment_id) from reply")
+    max = c.fetchone()[0]
+    cnt_list=[]
+    
+    for i in range(max):
+        c.execute("select count(comment_id) from reply where comment_id = ? and reply_del_flg = 0",(i,))
+        cnt_list.append(c.fetchone())
+        print(cnt_list)
+    cnt_list.append((0,))
     c.close()
-
-    return render_template('bbs.html', comment_list = comment_list)
+    
+    return render_template('bbs.html', comment_list = comment_list, tpl_cnt_list = cnt_list)
 
 
 
@@ -111,7 +120,7 @@ def reply(id):
         c.execute("select id from bbs where id = ?",(id,))
         comment_id = c.fetchone()[0]
         print(comment_id)
-
+        print(id)
         c.close()
 
         return render_template("reply.html", comment_list = comment_list, reply_list = reply_list, comment_id = comment_id)
@@ -164,6 +173,7 @@ def course():
 def intro():
     return render_template("intro.html")
 
+
 @app.route("/del/<int:id>")
 def del_comment(id):
 
@@ -174,6 +184,21 @@ def del_comment(id):
     c.close()
 
     return redirect("/bbs")
+
+@app.route("/del_rep/<int:rep_id>/<int:id>")
+def del_reply(rep_id,id):
+    print(rep_id)
+    print(id)
+
+    conn = sqlite3.connect("pinkoro.db")
+    c = conn.cursor()
+    c.execute("update reply set reply_del_flg = 1 where reply_id =?",(id,))
+    conn.commit()
+    c.close()
+    print("delete!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+    return redirect("/reply/" + str(rep_id))
+
 
 @app.route("/taiyou")
 def taiyou():
