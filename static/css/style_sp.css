@@ -31,6 +31,8 @@ li {
   margin: 1 0 5 0;
 }
 
+
+
 /* footer */
 .footer {
   background-color: green;
@@ -358,6 +360,10 @@ map p {
 
 .jinja {
   margin-bottom: 10px;
+}
+
+.omikuji {
+  text-align: center;
 }
 
 .omikuji_random {
