@@ -13,6 +13,7 @@ app.secret_key = "sunabaco"
 def top():
     return render_template("top.html")
 
+
 # 投稿ページ（表示）
 
 
@@ -22,14 +23,24 @@ def bbs():
     conn = sqlite3.connect("pinkoro.db")
     c = conn.cursor()
 
-    c.execute("select id,name,comment,image,time from bbs where del_flg = 0")
+    c.execute("select id,name,comment,image,time from bbs where del_flg = 0 order by time desc")
     comment_list = []
     for row in c.fetchall():
         comment_list.append({"id": row[0], "name": row[1], "comment": row[2], "image": row[3], "time":row[4]})
     
+    # if comment_list["image"] is None:
+
+
+    # comment_id = comment_list
+
+    # c.execute("select count(comment_id) from reply")
+    # reply_count = c.fetchall()
+    # print("-------------------------")
+    # print(reply_count)
+
     c.close()
 
-    return render_template('bbs.html', comment_list = comment_list)
+    return render_template('bbs.html', comment_list = comment_list, reply_count = reply_count)
 
 
 
@@ -84,7 +95,7 @@ def add():
 
         return redirect("/bbs") 
 
-# 返信ページ（表示）
+# 返信ページ（表示,投稿）
 
 @app.route("/reply/<int:id>",methods=["GET","POST"])
 def reply(id):
@@ -100,7 +111,7 @@ def reply(id):
         print("-------------------------")
         print(comment_list)
 
-        c.execute("select reply_id,reply_name,reply_comment,reply_time from reply join bbs on bbs.id = reply.comment_id where reply_del_flg = 0 and bbs.id = ?",(id,))
+        c.execute("select reply_id,reply_name,reply_comment,reply_time from reply join bbs on bbs.id = reply.comment_id where reply_del_flg = 0 and bbs.id = ? order by reply_time desc",(id,))
         reply_list = []
         for row in c.fetchall():
             reply_list.append({"id": row[0], "name": row[1], "comment": row[2], "time":row[3]})
@@ -133,7 +144,7 @@ def reply(id):
         print("-------------------------")
         print(comment_list)
 
-        c.execute("select reply_id,reply_name,reply_comment,reply_time from reply join bbs on bbs.id = reply.comment_id where reply_del_flg = 0 and bbs.id = ?",(id,))
+        c.execute("select reply_id,reply_name,reply_comment,reply_time from reply join bbs on bbs.id = reply.comment_id where reply_del_flg = 0 and bbs.id = ? order by reply.reply_time desc",(id,))
         reply_list = []
         for row in c.fetchall():
             reply_list.append({"id": row[0], "name": row[1], "comment": row[2], "time":row[3]})
@@ -150,9 +161,6 @@ def reply(id):
         return render_template("reply.html", comment_list = comment_list, reply_list = reply_list, comment_id = comment_id)
 
 
-# 返信ページ（投稿）
-
-
 
 
 
@@ -166,7 +174,6 @@ def course():
 def intro():
     return render_template("intro.html")
 
-<<<<<<< HEAD
 @app.route("/del/<int:id>")
 def del_comment(id):
 
@@ -177,7 +184,7 @@ def del_comment(id):
     c.close()
 
     return redirect("/bbs")
-=======
+
 @app.route("/taiyou")
 def taiyou():
     return render_template("taiyou.html")
@@ -194,7 +201,6 @@ def sakamoto():
 def miyaji():
     return render_template("miyaji.html")
 
->>>>>>> 46663daffb9739aeca709e32253fe00148f70b82
 
 
 
