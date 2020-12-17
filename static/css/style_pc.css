@@ -135,6 +135,9 @@ button.btn:hover{
   color:black;
   font-weight: bold;
 }
+span{
+  color: red;
+}
 .course{
   padding: 2.5% 0;
   display: flex;
