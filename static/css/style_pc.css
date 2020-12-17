@@ -305,6 +305,10 @@ button.btn:hover{
   margin: 0 auto;
 }
 
+.henshin {
+  text-align: center;
+}
+
 .reply {
   text-align: center;
 }
@@ -323,6 +327,10 @@ button.btn:hover{
 }
 map p{
   font-size: 45px;
+}
+
+.omikuji {
+  text-align: center;
 }
 
 .omikuji_random {
