@@ -1,25 +1,29 @@
-body{
-  font-family: 'メイリオ', Meiryo,'Osaka','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+body {
+  font-family: 'メイリオ', Meiryo, 'Osaka', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
 }
+
 li {
   list-style: none;
 }
 
-.header{
-  background-color:#FFB319;
+.header {
+  background-color: green;
   color: #fff;
   height: 100px;
   font-size: 30px;
   font-weight: bold;
   width: 100%;
 }
-.header-logo{
+
+.header-logo {
   float: left;
   font-size: 25px;
   font-weight: bold;
-  padding: 20px 40px;
+  padding: 20px;
+  line-height: 50px;
 }
-.header-list li{
+
+.header-list li {
   float: right;
   padding: 33px 20px;
   font-size: 20px;
@@ -28,69 +32,81 @@ li {
 }
 
 /* footer */
-.footer{
-  background-color:#FFB319;
+.footer {
+  background-color: green;
   height: 100px;
   color: white;
   font-size: 30px;
 }
-.footer-logo{
+
+.footer-logo {
   text-align: left;
   font-size: 10px;
   font-weight: bold;
 }
-.footer-list li{
-text-align: right;
-font-size: 10px;
-font-weight: bold;
+
+.footer-list li {
+  text-align: right;
+  font-size: 10px;
+  font-weight: bold;
 }
+
 /* #新しいTOP */
 
-body{
-  margin: 1px;   /* 外側の余白を30pxに */
-   /* padding:0 200px ;   内側の余白を消す */
-   background-color:#FFF8DC; /* 本文部分の背景色 */
+body {
+  margin: 1px;
+  /* 外側の余白を30pxに */
+  /* padding:0 200px ;   内側の余白を消す */
+  background-color: #FFF8DC;
+  /* 本文部分の背景色 */
 }
 
-.intro{
+.intro {
   text-align: center;
   font-size: 10px;
   font-weight: bold;
-  color: #158b2b;
+  color: black;
 }
-.intro p{
+
+.intro p {
   font-size: 8px;
   font-weight: bold;
 }
-.intro li{
+
+.intro li {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  padding-left:1em;
-  text-indent:-1em;
+  padding-left: 1em;
+  text-indent: -1em;
 }
-.menu{
+
+.menu {
   text-align: center;
 }
-.btn{
-  font-size:15px ;
+
+.btn {
+  font-size: 15px;
   font-weight: bold;
   background-color: #e0e0e0;
   padding: 60px 120px;
   margin: 5%;
-  box-shadow   : 6px 6px 3px #666666; 
+  box-shadow: 6px 6px 3px #666666;
   width: 390px;
-  border-radius:30px;
+  border-radius: 30px;
 }
-.btn p{
+
+.btn p {
   font-size: 10px;
   font-weight: bold;
 }
-button.btn:hover{
-  background-color:#FFB319;
+
+button.btn:hover {
+  background-color: #FFB319;
   color: #fff;
 }
-.setsumei{
+
+.setsumei {
   font-size: 25px;
   font-weight: bold;
   color: #158b2b;
@@ -98,113 +114,146 @@ button.btn:hover{
 }
 
 /* courseのCSS */
-.title{
+.title {
   font-size: 40px;
   font-weight: bold;
   text-align: center;
   color: #020201;
 }
 
-.junbi{
+.junbi {
   text-align: center;
   height: 70pxpx;
 }
-.junbi p{
+
+.junbi p {
   font-size: 24px;
   font-weight: bold;
   color: black;
 }
-.junbi li{
+
+.junbi li {
   font-size: 20px;
   font-weight: bold;
 }
-.course_p{
+.movie-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /*アスペクト比 16:9の場合の縦幅*/
+  height: 0;
+  overflow: hidden;
+}
+
+.movie-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.course_p {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  color: orange;
+  color: black;
   font-weight: bold;
 }
-.course{
+span{
+  color: red;
+}
+
+.course {
   padding: 2.5% 0;
   text-align: center;
   /* display: flex;
   flex-direction: row;
   justify-content: space-evenly; */
-  
+
 }
+
 .course p {
-  text-align:left;
+  text-align: left;
   font-size: 10px;
   font-weight: bold;
   font-weight: bold;
   color: #000000;
 
 }
+
 .btn_course1 {
-  font-size:30px ;
+  font-size: 30px;
   font-weight: bold;
   background-color: orange;
-  box-shadow   : 6px 6px 3px #666666; 
+  box-shadow: 6px 6px 3px #666666;
   width: 300px;
   height: 200px;
-  background-image:url(/static/images/しょうひんけん\(1\).png);
+  background-image: url(/static/images/しょうひんけん\(1\).png);
+  margin-bottom: 40px;
 
 }
-.btn_course2{
-  font-size:30px ;
+
+.btn_course2 {
+  font-size: 30px;
   font-weight: bold;
   background-color: orange;
-  box-shadow   : 6px 6px 3px #666666; 
+  box-shadow: 6px 6px 3px #666666;
   width: 300px;
   height: 200px;
-  background-image:url(/static/images/水島\ \(1\).png);
+  background-image: url(/static/images/水島\ \(1\).png);
+  margin-bottom: 40px;
 }
 
-.btn_course3{
-  font-size:30px ;
+.btn_course3 {
+  font-size: 30px;
   font-weight: bold;
   background-color: orange;
-  box-shadow   : 6px 6px 3px #666666; 
+  box-shadow: 6px 6px 3px #666666;
   width: 300px;
   height: 200px;
-  background-image:url(/static/images/いぐお２.png);
+  background-image: url(/static/images/いぐお２.png);
+  margin-bottom: 40px;
 }
-.btn_course4{
-  font-size:30px ;
+
+.btn_course4 {
+  font-size: 30px;
   font-weight: bold;
   background-color: orange;
-  box-shadow   : 6px 6px 3px #666666; 
+  box-shadow: 6px 6px 3px #666666;
   width: 300px;
   height: 200px;
-  background-image:url(/static/images/東陽村\ \(1\).jpg);
+  background-image: url(/static/images/東陽村\ \(1\).jpg);
   background-size: 100%;
+  margin-bottom: 40px;
 }
-.return{
+
+.return {
   text-align: center;
   margin-top: 100px;
   margin-bottom: 100px;
 }
-.course_btn{
+
+.course_btn {
   width: 100px;
   height: 70px;
-  border-radius:30px;
+  border-radius: 30px;
 }
 
 /* introのページ */
-.intro_setsumei{
+.intro_setsumei {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
   padding: 0 10px;
 }
-.intro_setsumei p{
+
+.intro_setsumei p {
   font-size: 10px;
   font-weight: bold;
   line-height: 35px;
-  
+
 }
-.intro_pincoro h1{
+
+.intro_pincoro h1 {
   padding: 26px 20px 33px 30px;
   font-size: 100%;
   text-align: left;
@@ -217,18 +266,22 @@ button.btn:hover{
   /* background: url(/shared/templates/free/images/border_h1.png) no-repeat left top, url(/static/images/jizou2.png) no-repeat right top; */
   background-size: 9px 100%, auto;
 }
-.intro_pincoro p{
+
+.intro_pincoro p {
   text-align: left;
 
 
 }
-.course_riyou p{
+
+.course_riyou p {
   text-align: left;
 }
-.bbs_setsumei p{
+
+.bbs_setsumei p {
   text-align: left;
 }
-.course_riyou h1{
+
+.course_riyou h1 {
   padding: 26px 20px 33px 30px;
   font-size: 150%;
   text-align: left;
@@ -241,9 +294,10 @@ button.btn:hover{
   /* background: url(/shared/templates/free/images/border_h1.png) no-repeat left top, url(/static/images/歩く人のシルエットアイコン素材\ 1\ \(2\).png) no-repeat right top; */
   background-size: 9px 100%, auto;
 }
-.bbs_setsumei h1{
+
+.bbs_setsumei h1 {
   padding: 26px 20px 33px 30px;
-  font-size: 133%; 
+  font-size: 133%;
   text-align: left;
   /* font-size: 45px; */
   font-weight: bold;
@@ -256,19 +310,21 @@ button.btn:hover{
 }
 
 /* 掲示板のページ */
-.bbs{
-  text-align:center;
+.bbs {
+  text-align: center;
 }
 
 .honbun {
   margin-top: 30px;
   margin-bottom: 12px;
 }
-.label{
+
+.label {
   vertical-align: top;
   margin-right: 5px;
 }
-.toukou_hyouji{
+
+.toukou_hyouji {
   border-top: 1px solid;
   margin: 40px auto;
   max-width: 975px;
@@ -278,6 +334,7 @@ button.btn:hover{
   border: solid 2px black;
   margin-bottom: 10px
 }
+
 .bbs_comment {
   font-size: 20px;
 }
@@ -286,15 +343,19 @@ button.btn:hover{
   width: 300px;
   height: 300px;
 }
-.map{
-  text-align: center; 
+
+.map {
+  text-align: center;
 }
-.map h1{
+
+.map h1 {
   font-size: 45px;
 }
-map p{
+
+map p {
   font-size: 45px;
 }
+
 .jinja {
   margin-bottom: 10px;
 }
