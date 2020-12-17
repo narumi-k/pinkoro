@@ -32,6 +32,55 @@ li {
 }
 
 
+header {
+	position: fixed;
+	width: 100%;
+}
+header .hum_menu {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+header .hum_menu a {
+	display: block;
+	height: 100px;
+	padding: 10px 0;
+	width: 40px;
+  background: #eeeaec;
+	text-align: center;
+}
+header .hum_menu span {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #aaa;
+	margin: 3px auto;
+}
+header ul {
+	display: none;
+	margin: 0 40px 0 0;
+}
+header ul li {
+	width: 50%; 
+	color: #acacac;
+	line-height: 40px;
+	text-align: left;
+	font-size: 12px;
+	text-indent: 8px;
+}
+header ul li a {
+	display: block;
+	border: 1px solid #555;
+	border-width: 1px 1px 0 0;
+}
+header.open {
+	background: #eeeaec;
+}
+header.open ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 
 /* footer */
 .footer {
