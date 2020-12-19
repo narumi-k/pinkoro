@@ -1,0 +1,1 @@
+web: gunicorn ファイル名:アプリ名 --log-file=-
